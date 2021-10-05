@@ -23,6 +23,27 @@ window.onload = () => {
   }
 };
 
+//boooks swiper
+var swiper = new Swiper(".books-slider", {
+  loop: true,
+  centerSlides: true,
+  autoplay: {
+    delay: 5500,
+    disableOnInteraction: false,
+  },
+  breakpoints: {
+    640: {
+      slidesPerView: 1,
+    },
+    768: {
+      slidesPerView: 2,
+    },
+    1024: {
+      slidesPerView: 3,
+    },
+  },
+});
+
 //EventListener functions
 const formToogle = () => {
   searchForm.classList.toggle("active");
