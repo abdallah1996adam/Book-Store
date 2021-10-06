@@ -43,6 +43,34 @@ var swiper = new Swiper(".books-slider", {
     },
   },
 });
+//featured swiper
+var swiper = new Swiper(".featured-slider", {
+  loop: true,
+  centerSlides: true,
+  spaceBetween: 10,
+  autoplay: {
+    delay: 5500,
+    disableOnInteraction: false,
+  },
+  navigation: {
+    nextEl: ".swiper-button-next",
+    prevEl: ".swiper-button-prev",
+  },
+  breakpoints: {
+    0: {
+      slidesPerView: 1,
+    },
+    450: {
+      slidesPerView: 2,
+    },
+    768: {
+      slidesPerView: 3,
+    },
+    1024: {
+      slidesPerView: 4,
+    },
+  },
+});
 
 //EventListener functions
 const formToogle = () => {
