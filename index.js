@@ -4,6 +4,7 @@ const searchBtn = document.getElementById("search-btn");
 const loginForm = document.querySelector(".container-form");
 const btnShowLoginForm = document.getElementById("login-btn");
 const btnCloseLoginForm = document.getElementById("close-btn");
+const loader = document.querySelector(".loader-container");
 
 //stickyNav
 window.onscroll = () => {
@@ -21,6 +22,7 @@ window.onload = () => {
   } else {
     header.classList.remove("active");
   }
+  fedOut();
 };
 
 //boooks swiper
@@ -93,8 +95,59 @@ var swiper = new Swiper(".arrivals-slider", {
     },
   },
 });
-
+//client slider
+var swiper = new Swiper(".reviews-slider", {
+  spaceBetween: 10,
+  grabCursor: true,
+  loop: true,
+  centeredSlides: true,
+  autoplay: {
+    delay: 9500,
+    disableOnInteraction: false,
+  },
+  breakpoints: {
+    0: {
+      slidesPerView: 1,
+    },
+    768: {
+      slidesPerView: 2,
+    },
+    1024: {
+      slidesPerView: 3,
+    },
+  },
+});
+//blog slider
+var swiper = new Swiper(".blogs-slider", {
+  spaceBetween: 10,
+  grabCursor: true,
+  loop: true,
+  centeredSlides: true,
+  autoplay: {
+    delay: 9500,
+    disableOnInteraction: false,
+  },
+  breakpoints: {
+    0: {
+      slidesPerView: 1,
+    },
+    768: {
+      slidesPerView: 2,
+    },
+    1024: {
+      slidesPerView: 3,
+    },
+  },
+});
 //EventListener functions
+
+const webSiteIntro = () => {
+  loader.classList.add("active");
+};
+
+const fedOut = () => {
+  setTimeout(webSiteIntro, 3990);
+};
 const formToogle = () => {
   searchForm.classList.toggle("active");
 };
